@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ejumboS3B.Views.Login">
+    <VerticalStackLayout Spacing="20"
+                         Padding="20">
+        <Label 
+            Text="Inicio de Sesión"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+       
+        <Image Source="https://revista.uisrael.edu.ec/images/uisrael.png"
+               WidthRequest="250"></Image>
+        <Image Source="images.png" WidthRequest="200"></Image>
+
+        <Entry x:Name="txtUsuario"
+               Placeholder="Ingrese el usuario"
+               MaxLength="25"></Entry>
+        
+        <Entry x:Name="txtPassword"
+               Placeholder="Ingrese la contraseña"
+               IsPassword="True"/>
+
+        <Grid ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnIniciar"
+                    Text="Iniciar Sesión"
+                    Clicked="btnIniciar_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+            <Button x:Name="btnRegistro"
+                    Text="Registrar Usuario"
+                    Clicked="btnRegistro_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
